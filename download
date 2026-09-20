@@ -1,20 +1,34 @@
-# Never publish Vyre proprietary implementation or binaries
+# Proprietary Vyre implementation / distributables
 SOURCE/
 src/
 target/
 build/
+out/
 *.class
 *.jar
 *.zip
 
+# IDE
+.idea/
+.vscode/
+*.iml
+
 # Runtime/server data
 plugins/Vyre/storage/
 plugins/Vyre/data/
+logs/
+*.log
 *.db
 *.sqlite
-*.log
 
 # Secrets
 .env
+.env.*
 *.key
 *.pem
+secrets.yml
+credentials.yml
+
+# OS
+.DS_Store
+Thumbs.db

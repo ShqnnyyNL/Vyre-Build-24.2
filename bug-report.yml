@@ -1,8 +1,13 @@
 name: Bug report
-description: Report a reproducible Vyre problem
+description: Report a reproducible problem with Vyre
 title: "[BUG] "
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a Vyre issue. Remove passwords, tokens and other secrets from logs before submitting.
+
   - type: input
     id: vyre
     attributes:
@@ -10,18 +15,23 @@ body:
       placeholder: "3.9.7.12"
     validations:
       required: true
+
   - type: input
     id: paper
     attributes:
-      label: Exact Paper build
+      label: Exact Paper version/build
+      placeholder: "Paper 26.2 build ..."
     validations:
       required: true
+
   - type: input
     id: java
     attributes:
-      label: Java version
+      label: Java runtime
+      placeholder: "java -version"
     validations:
       required: true
+
   - type: dropdown
     id: client
     attributes:
@@ -32,22 +42,47 @@ body:
         - Both
     validations:
       required: true
+
   - type: textarea
     id: steps
     attributes:
-      label: Steps to reproduce
-      placeholder: "1. ...
-2. ...
-3. ..."
+      label: Reproduction steps
+      placeholder: |
+        1. Join the server
+        2. Run ...
+        3. Click ...
+        4. Error occurs
     validations:
       required: true
+
   - type: textarea
     id: expected
     attributes:
       label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
   - type: textarea
     id: logs
     attributes:
-      label: Relevant console output
-      description: Remove credentials, tokens and private information before posting.
+      label: Relevant sanitized console output
       render: shell
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Happened once
+    validations:
+      required: true

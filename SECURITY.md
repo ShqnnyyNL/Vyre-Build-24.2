@@ -1,12 +1,21 @@
 # Security Policy
 
-Vyre is a private-source project.
+Vyre is private-source software.
 
-Please do not publish:
-- credentials, tokens or database passwords;
-- private server information;
-- leaked or decompiled Vyre source;
-- private Vyre builds;
-- configuration containing secrets.
+## Public reports
 
-For normal plugin bugs, use the public bug-report template and provide the smallest reproducible example possible.
+Ordinary reproducible plugin bugs can be reported through GitHub Issues.
+
+Before posting logs, remove:
+- passwords;
+- API keys;
+- tokens;
+- database credentials;
+- private addresses or infrastructure information;
+- other secrets.
+
+## Proprietary material
+
+Do not publish leaked/decompiled Vyre source, reconstructed implementation code, private builds or internal development artifacts in this repository.
+
+For a vulnerability that would be unsafe to disclose publicly, contact the project owner privately rather than posting exploitation details in a public issue.

@@ -3,16 +3,42 @@ description: Suggest an improvement to the Vyre experience
 title: "[IDEA] "
 labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Focus on the player/server experience. Proprietary implementation details are intentionally kept private.
+
   - type: textarea
     id: problem
     attributes:
-      label: What problem would this solve?
+      label: What problem or limitation does this address?
     validations:
       required: true
+
   - type: textarea
-    id: idea
+    id: experience
     attributes:
-      label: Suggested experience
-      description: Focus on what the player or server staff should experience rather than implementation details.
+      label: What should the player experience be?
     validations:
       required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Survival gameplay
+        - Profile / progression
+        - Friends / social
+        - Menus / UX
+        - Bedrock / mobile
+        - Performance
+        - Administration / configuration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
