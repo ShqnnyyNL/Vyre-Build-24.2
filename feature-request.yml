@@ -1,0 +1,18 @@
+name: Feature suggestion
+description: Suggest an improvement to the Vyre experience
+title: "[IDEA] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested experience
+      description: Focus on what the player or server staff should experience rather than implementation details.
+    validations:
+      required: true

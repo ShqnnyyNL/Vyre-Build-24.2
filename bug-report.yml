@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible Vyre problem
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: input
+    id: vyre
+    attributes:
+      label: Vyre version
+      placeholder: "3.9.7.12"
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Exact Paper build
+    validations:
+      required: true
+  - type: input
+    id: java
+    attributes:
+      label: Java version
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options:
+        - Java Edition
+        - Bedrock / Geyser
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. ...
+2. ...
+3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant console output
+      description: Remove credentials, tokens and private information before posting.
+      render: shell

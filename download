@@ -1,0 +1,20 @@
+# Never publish Vyre proprietary implementation or binaries
+SOURCE/
+src/
+target/
+build/
+*.class
+*.jar
+*.zip
+
+# Runtime/server data
+plugins/Vyre/storage/
+plugins/Vyre/data/
+*.db
+*.sqlite
+*.log
+
+# Secrets
+.env
+*.key
+*.pem
