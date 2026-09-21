@@ -1,32 +1,34 @@
 # Vyre Roadmap
 
-This roadmap describes development priorities, not guaranteed release dates.
+This roadmap shows development priorities, not guaranteed dates.
 
-## Priority 1 — Stability
-- Eliminate startup and runtime blockers.
-- Protect persistent player/server data.
-- Improve diagnostics for configuration failures.
-- Prevent duplicate temporary UI/display objects.
+## Completed foundation
 
-## Priority 2 — Paper compatibility
-- Validate affected APIs against the supported Paper line.
-- Remove runtime linkage/ABI problems.
-- Verify inventories, item metadata, scoreboards, events and world-loading behavior.
+- **Step 1 — Runtime/ABI stability:** released in 3.9.7.14.
+- **Step 2 — Paper 26.2 build 126 compatibility baseline:** released in 3.9.7.15.
 
-## Priority 3 — Performance
-- Profile hot event paths.
-- Reduce unnecessary menu and scoreboard refresh work.
-- Cache appropriate frequently-read configuration/state.
-- Improve world/player preparation paths.
-- Validate behavior under representative multi-player load.
+## Next priorities
 
-## Priority 4 — UX polish
-- Standardize Profile, Friends, Titles, Quests and related menus.
-- Improve Bedrock/mobile navigation and responsiveness.
-- Keep item text concise and visually consistent.
-- Improve error/requirement feedback.
+### Step 3 — Data safety and migrations
 
-## Priority 5 — Gameplay
-- Expand survival content only after the underlying systems are stable.
-- Continue medieval survival/event direction.
-- Favor meaningful world activity over menu-only features.
+- Harden configuration and player-data migration.
+- Preserve homes, warps, ranks, coins, levels and progression.
+- Improve recovery messages for invalid or missing data.
+
+### Step 4 — Performance and reliability
+
+- Profile survival and spawn workloads.
+- Reduce unnecessary GUI, scoreboard and hologram refresh work.
+- Improve event scheduling and cancellation safety.
+- Keep Java and Bedrock interactions responsive.
+
+### Step 5 — Player experience polish
+
+- Refine the medieval menu language and navigation.
+- Expand apocalypse missions and world events.
+- Improve cosmetics, progression feedback and new-player flow.
+- Keep every addition aligned with enjoyment, polish and performance.
+
+## Server launch line
+
+The Vyre Server 26.3 environment is under active development for its official launch. Compatibility will only be promoted to production after the same stability gates used for 26.2 are complete.

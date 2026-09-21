@@ -6,83 +6,63 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting a Vyre issue. Remove passwords, tokens and other secrets from logs before submitting.
-
+        Thanks for helping improve Vyre. Remove credentials, private configuration, player data and proprietary binaries before submitting.
   - type: input
-    id: vyre
+    id: vyre-version
     attributes:
       label: Vyre version
-      placeholder: "3.9.7.12"
+      placeholder: "3.9.7.15"
     validations:
       required: true
-
   - type: input
-    id: paper
+    id: paper-build
     attributes:
-      label: Exact Paper version/build
-      placeholder: "Paper 26.2 build ..."
+      label: Paper build
+      placeholder: "26.2 build 126"
     validations:
       required: true
-
-  - type: input
-    id: java
-    attributes:
-      label: Java runtime
-      placeholder: "java -version"
-    validations:
-      required: true
-
   - type: dropdown
     id: client
     attributes:
-      label: Client
+      label: Client platform
       options:
-        - Java Edition
-        - Bedrock / Geyser
+        - Java
+        - Bedrock through Geyser/Floodgate
         - Both
     validations:
       required: true
-
   - type: textarea
     id: steps
     attributes:
       label: Reproduction steps
+      description: List the shortest reliable path to the problem.
       placeholder: |
         1. Join the server
         2. Run ...
-        3. Click ...
-        4. Error occurs
+        3. Observe ...
     validations:
       required: true
-
   - type: textarea
     id: expected
     attributes:
       label: Expected behavior
     validations:
       required: true
-
   - type: textarea
     id: actual
     attributes:
       label: Actual behavior
     validations:
       required: true
-
   - type: textarea
     id: logs
     attributes:
-      label: Relevant sanitized console output
+      label: Sanitized logs
       render: shell
-
-  - type: dropdown
-    id: frequency
+  - type: checkboxes
+    id: safety
     attributes:
-      label: Frequency
+      label: Privacy check
       options:
-        - Every time
-        - Often
-        - Sometimes
-        - Happened once
-    validations:
-      required: true
+        - label: I removed secrets, personal data, private configuration and proprietary binaries.
+          required: true

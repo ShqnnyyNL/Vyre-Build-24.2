@@ -6,39 +6,42 @@ body:
   - type: markdown
     attributes:
       value: |
-        Focus on the player/server experience. Proprietary implementation details are intentionally kept private.
-
+        Focus on the player experience: enjoyment, polish, flow, performance and features that earn their place.
+  - type: input
+    id: title
+    attributes:
+      label: Idea name
+      placeholder: A short memorable name
+    validations:
+      required: true
   - type: textarea
     id: problem
     attributes:
-      label: What problem or limitation does this address?
+      label: What problem does it solve?
     validations:
       required: true
-
   - type: textarea
     id: experience
     attributes:
-      label: What should the player experience be?
+      label: How should it feel in game?
+      description: Describe the player flow without prescribing private implementation.
     validations:
       required: true
-
   - type: dropdown
-    id: area
+    id: system
     attributes:
-      label: Area
+      label: Realm system
       options:
-        - Survival gameplay
-        - Profile / progression
-        - Friends / social
-        - Menus / UX
-        - Bedrock / mobile
-        - Performance
-        - Administration / configuration
+        - Survival
+        - Progression
+        - Friends and social
+        - Homes and travel
+        - Quests and jobs
+        - Events
+        - Cosmetics
+        - Economy
+        - Interface and accessibility
+        - Administration
         - Other
     validations:
       required: true
-
-  - type: textarea
-    id: extra
-    attributes:
-      label: Additional context

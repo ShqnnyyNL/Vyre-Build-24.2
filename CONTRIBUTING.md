@@ -1,29 +1,21 @@
 # Contributing to Vyre
 
-Vyre's implementation is private-source, but useful public contributions are still welcome.
+Vyre's implementation is private-source, but useful community contributions are welcome.
 
-Good contributions include:
+## Welcome contributions
+
 - reproducible bug reports;
 - Paper compatibility observations;
-- Java/Bedrock UX reports;
+- Java/Bedrock UX feedback;
 - documentation corrections;
-- carefully scoped feature suggestions.
+- focused gameplay and quality-of-life ideas.
 
-## Bug reports
+## Before submitting
 
-Include:
-1. Vyre version.
-2. Exact Paper build.
-3. Java runtime.
-4. Client type.
-5. Exact reproduction steps.
-6. Expected and actual behavior.
-7. Relevant sanitized logs.
+1. Confirm the issue on Vyre 3.9.7.15 when possible.
+2. Record the exact Paper build, Java version and client platform.
+3. Reduce the report to clear reproduction steps.
+4. Remove passwords, tokens, IPs, personal data and unrelated log content.
+5. Never upload Vyre binaries, decompiled output or proprietary configuration.
 
-## Feature suggestions
-
-Describe the player problem and desired experience rather than attempting to recreate Vyre's internal implementation.
-
-## Source code
-
-Do not submit decompiled, leaked or reconstructed Vyre implementation code.
+Submitting an idea does not make the implementation open source and does not grant redistribution rights.

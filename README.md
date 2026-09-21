@@ -1,565 +1,133 @@
 <div align="center">
 
+![Vyre — Explore, Survive, Belong](assets/vyre-banner.png)
+
 # ⚔️ VYRE
 
-### Private-source medieval survival framework for Minecraft
+### A private-source medieval survival framework for Minecraft
 
-**A unified survival experience built around progression, exploration, social gameplay and polished cross-platform UX.**
+**One core plugin. One connected realm. Built for polished Java and Bedrock gameplay.**
 
-![Vyre](https://img.shields.io/badge/VYRE-3.9.7.12-7c3aed?style=for-the-badge&labelColor=111827)
-![Paper](https://img.shields.io/badge/PAPER-26.2-22c55e?style=for-the-badge&labelColor=111827)
-![Source](https://img.shields.io/badge/SOURCE-PRIVATE-ef4444?style=for-the-badge&labelColor=111827)
-![Development](https://img.shields.io/badge/DEVELOPMENT-ACTIVE-38bdf8?style=for-the-badge&labelColor=111827)
+[![Vyre](https://img.shields.io/badge/Vyre-3.9.7.15-6ee7f9?style=for-the-badge)](#current-release)
+[![Paper](https://img.shields.io/badge/Paper-26.2%20build%20126-ffffff?style=for-the-badge)](COMPATIBILITY.md)
+[![Java](https://img.shields.io/badge/Java-25-f59e0b?style=for-the-badge)](COMPATIBILITY.md)
+[![Source](https://img.shields.io/badge/Source-Private-ef4444?style=for-the-badge)](LICENSE.txt)
 
-**Enjoyment → Polish → Flow → Performance → Features**
+**Explore · Survive · Belong**
 
 </div>
 
 ---
 
-## Overview
+## What is Vyre?
 
-Vyre is a custom Minecraft server framework designed to make a survival server feel like **one coherent game experience** rather than a collection of unrelated plugins.
+Vyre turns a Minecraft survival server into one coherent medieval realm. Progression, social systems, events, homes, ranks, cosmetics and administration share the same visual language and player flow instead of feeling like unrelated plugins.
 
-The project combines player progression, social systems, economy, homes, warps, quests, jobs, achievements, cosmetics, discoveries, server events and custom navigation behind a consistent Vyre interface.
+The project follows one development order:
 
-Vyre is developed as a **private-source project**. This repository is its public-facing home for project information, release notes, compatibility information, bug reports and feature suggestions. The proprietary Java implementation is intentionally not included.
+> **Enjoyment → Polish → Flow → Performance → Features**
 
----
+## Current release
 
-## Design philosophy
-
-A feature is not considered finished simply because the command works.
-
-Vyre development focuses on the complete player experience:
-
-- Is the feature understandable without staff explaining it?
-- Does it feel consistent with the rest of the server?
-- Is navigation fast?
-- Does it work cleanly for both Java and Bedrock players?
-- Does it remain responsive under load?
-- Can server administrators configure it without touching source code?
-- Does it add meaningful survival gameplay rather than menu clutter?
-
-This leads to a strict development order:
-
-> **Stability first. Compatibility second. Performance third. Polish fourth. Features fifth.**
-
----
-
-# ✦ Player Experience
-
-## 👤 Profile
-
-The Profile is the central location for systems that belong specifically to the player.
-
-Instead of filling the main survival menu with progression shortcuts, player-focused systems are grouped together so navigation remains predictable as Vyre grows.
-
-Typical Profile systems include:
-
-- Friends
-- Levels
-- Skills
-- Upgrades
-- Achievements
-- Quests
-- Jobs
-- Titles and supported personalization
-- Daily/player rewards
-- Personal settings
-
-The intention is to make Profile feel like the player's own control center rather than another generic inventory GUI.
-
----
-
-## 🤝 Friends & social gameplay
-
-Vyre includes its own social direction rather than treating multiplayer as nothing more than chat.
-
-The Friends system is designed around meaningful survival interactions such as:
-
-- Managing friends
-- Viewing friend-related actions
-- Requesting access to supported player areas
-- Interacting with homes where permitted
-- Social navigation without exposing unrestricted teleportation
-- Clear permission boundaries between land owner and visitor
-
-Social features are designed to complement survival ownership instead of bypassing it.
-
----
-
-## 📈 Levels, progression & upgrades
-
-Progression gives players long-term objectives without requiring the server to become a traditional RPG.
-
-Vyre's progression direction includes activity-based advancement from gameplay such as:
-
-- Playtime
-- Mining
-- Farming
-- Fishing
-- Exploration
-- Quests
-- Jobs
-- Events
-- Mob encounters
-- Discoveries and locations
-
-Progression can unlock rewards, convenience improvements and cosmetic/status elements while keeping survival itself recognizable.
-
-The system is intended to reward **playing the world**, not repeatedly opening menus.
-
----
-
-## 🏆 Achievements
-
-Achievements provide permanent milestones for meaningful player accomplishments.
-
-Examples of achievement categories include:
-
-- First progression milestones
-- Exploration
-- Economy
-- Survival
-- Building
-- Combat
-- Travel
-
-Achievements are designed to create smaller goals between major progression levels.
-
----
-
-# ✦ Survival Experience
-
-## 🏠 Homes
-
-Homes provide persistent player navigation while remaining part of the survival experience.
-
-Vyre's home direction includes:
-
-- Player-owned home locations
-- Supported access controls
-- Friend interaction where permitted
-- Teleport preparation/delay behavior
-- Movement cancellation where applicable
-- GUI and command integration
-- Preservation of home data across normal plugin updates
-
-Player data safety is considered more important than cosmetic changes to the system.
-
----
-
-## 🌍 Warps
-
-Warps provide server-controlled navigation to important locations.
-
-They are intended for destinations such as:
-
-- Spawn
-- Markets
-- Community areas
-- Event locations
-- Server facilities
-- Other configured destinations
-
-Warp presentation is kept consistent with the rest of Vyre rather than behaving like a separate utility plugin.
-
----
-
-## 🛒 Economy & Shop
-
-Vyre's economy systems are built to give currency a reason to exist inside survival.
-
-The Shop provides regular server-facing trade while additional systems can create rarer or more situational opportunities.
-
-Economy design aims to avoid turning every activity into a pure money grind.
-
----
-
-## ☠️ Black Market
-
-The Black Market is treated as a survival/economy system — **not a cosmetic submenu**.
-
-It is intended to feel more unusual than the standard shop and can be presented independently through Vyre's configurable menu structure.
-
-Keeping it separate also makes the main navigation easier to understand.
-
----
-
-## 🎒 Kits
-
-Kits provide configured item packages tied to supported permissions, ranks or server progression.
-
-Vyre's kit presentation is intended to keep:
-
-- Default kits
-- Ranked kits
-- Requirement feedback
-- Item presentation
-- Claim behavior
-
-visually consistent with the rest of the server.
-
----
-
-## ✨ Cosmetics
-
-Cosmetics provide optional personalization without replacing the core survival loop.
-
-The design goal is:
-
-> **Customization should make a player feel unique without making survival feel fake.**
-
-Staff/testing access and player unlock requirements can be handled separately where configured.
-
----
-
-# ✦ Quests, Jobs & World Activity
-
-## 📜 Quests
-
-Quests provide directed objectives for players who want something specific to work toward.
-
-Vyre's quest direction favors objectives that naturally fit survival and the server's medieval/apocalyptic atmosphere rather than disconnected checklist tasks.
-
----
-
-## ⛏️ Jobs
-
-Jobs provide another progression/economy path through ordinary gameplay.
-
-The system is intended to complement the player's chosen playstyle instead of forcing every player through exactly the same route.
-
----
-
-## 🧭 Discoveries
-
-Exploration should matter.
-
-Discoveries allow important locations and world exploration to become part of progression, giving players reasons to travel beyond their home and spawn.
-
----
-
-## ⚔️ Dynamic events
-
-Vyre's event framework is intended to make the survival world occasionally feel unpredictable.
-
-Event concepts can include experiences such as:
-
-- Zombie outbreaks
-- Supply drops
-- Meteor crashes
-- Treasure hunts
-- Boss encounters
-- Lost expeditions
-- Abandoned laboratories
-- Merchant caravans
-
-The project does **not** aim to turn the server into a gun-focused shooter. Vyre's gameplay direction remains survival-oriented with a medieval atmosphere.
-
-Events should enhance normal survival rather than constantly interrupt it.
-
----
-
-# ✦ Menus & UX
-
-## One visual language
-
-Vyre uses a unified menu direction across its systems.
-
-Menu design focuses on:
-
-- Consistent titles
-- Consistent Back navigation
-- Predictable item placement
-- Clear locked/unlocked states
-- Short useful descriptions
-- Reduced unnecessary lore
-- Minimal visual clutter
-- Consistent requirement presentation
-- Fast menu opening
-- Configuration-driven layouts where supported
-
-The goal is for a player to recognize a Vyre interface immediately.
-
----
-
-## Main Menu
-
-The Main Menu is intentionally reserved primarily for **survival-facing destinations**.
-
-Player progression systems belong under Profile.
-
-This prevents the main menu from becoming a giant directory as new systems are added.
-
-### Survival-oriented navigation may include
-
-`Profile` · `Homes` · `Warps` · `Shop` · `Kits` · `Black Market` · `Cosmetics` · `Discoveries` · `Events` · `Realm Guide`
-
-Exact contents may differ between server configurations and releases.
-
----
-
-# ✦ Java & Bedrock
-
-Vyre is developed with cross-platform server communities in mind.
-
-Java inventory interfaces do not automatically translate into a good Bedrock or mobile experience, so Bedrock behavior is treated as its own UX concern.
-
-Areas of focus include:
-
-- Click reliability
-- Menu responsiveness
-- Mobile readability
-- Navigation depth
-- Interaction feedback
-- Avoiding unnecessary menu refreshes
-- Geyser/Floodgate compatibility
-- Reducing expensive preparation before player actions
-
-A menu that technically opens but feels frustrating on a phone is still considered a UX problem.
-
----
-
-# ✦ Performance
-
-Performance work is part of feature development, not an afterthought.
-
-Vyre's performance direction includes:
-
-- Avoiding unnecessary synchronous work
-- Reducing repeated configuration parsing
-- Caching suitable frequently-read state
-- Keeping menu construction lightweight
-- Limiting repeated scoreboard/UI updates
-- Cleaning up temporary entities and visual objects correctly
-- Avoiding duplicate hologram or display creation
-- Moving suitable work away from hot event paths
-- Preserving safe Bukkit/Paper thread boundaries
-- Profiling before making high-player-count claims
-
-### Player-count claims
-
-Vyre is being engineered with larger communities in mind, but this repository intentionally does **not** advertise an arbitrary guaranteed player capacity.
-
-A capacity claim is only useful when backed by representative profiling with the actual server configuration, worlds, plugins, hardware and gameplay load.
-
----
-
-# ✦ Paper compatibility
-
-Minecraft/Paper updates can change APIs and runtime behavior.
-
-For that reason, Vyre treats Paper compatibility as a release requirement rather than assuming a build works because it compiles.
-
-Compatibility work includes checking:
-
-- API changes
-- Runtime linkage errors
-- Inventory APIs
-- Scoreboard APIs
-- Event handling
-- World loading
-- Item metadata
-- Commands
-- Configuration serialization
-- Geyser-related behavior where applicable
-
-### Current public target
-
-| Component | Target |
+| Component | Current status |
 | --- | --- |
-| Vyre | `3.9.7.12` |
-| Server software | Paper |
-| Validated development line | Paper `26.2` |
-| Source model | Private / proprietary |
-| Development | Active |
+| Vyre plugin | **3.9.7.15** |
+| Production target | **Paper 26.2 build 126** |
+| Java runtime | **Java 25** |
+| API declaration | **26.2** |
+| Java clients | Supported |
+| Bedrock clients | Supported through Geyser/Floodgate |
+| Source code | Private / proprietary |
+| Vyre Server 26.3 | Under development for official launch |
 
-Always check release notes before updating Paper on a production server.
+### Soft dependencies
 
----
+1. PlaceholderAPI
+2. LuckPerms
+3. Iris
 
-# ✦ Configuration philosophy
+Vyre is delivered as one core plugin. The integrations above are optional and are detected safely when present.
 
-Vyre aims to expose presentation and supported server behavior through configuration without exposing the implementation itself.
+## Release 3.9.7.15 — Compatibility baseline
 
-Where supported, administrators should be able to configure things such as:
+This release completes the second stability step and locks Vyre to a clean, auditable runtime baseline:
 
-- Menu items
-- GUI positions
-- Display names
-- Descriptions
-- Requirements
-- Ranks
-- Supported InfoBoard content
-- Cosmetics
-- Shop presentation
-- Other module-specific options
+- compiled against `paper-api 26.2.build.126-stable`;
+- declares `api-version: '26.2'`;
+- targets Java 25 bytecode;
+- rejects CraftBukkit and NMS implementation dependencies;
+- moves Friends player-head rendering to the modern profile data-component API;
+- verifies **2,535 API references** with **zero unresolved or internal references**;
+- passes the complete **175/175 regression suite**;
+- publishes reproducible checksums with the private release package.
 
-Configuration files are not a substitute for source code and should not contain implementation secrets.
+This is a compatibility and stability release. It intentionally does not add new gameplay, GUI, event or performance features.
 
----
+Read the full notes in [CHANGELOG.md](CHANGELOG.md).
 
-# ✦ Data safety & updates
+## Realm systems
 
-Before updating Vyre on a production server:
-
-```text
-1. Stop the server.
-2. Back up the complete plugins/Vyre directory.
-3. Back up important world/player data.
-4. Replace the Vyre build.
-5. Do not blindly replace existing YAML/data files.
-6. Start the server.
-7. Read migration and compatibility messages in console.
-8. Test critical systems before opening the server to players.
-```
-
-Critical checks should include:
-
-- Player login
-- Profile
-- Main Menu
-- Homes
-- Warps
-- Economy
-- Friends
-- Progression
-- Scoreboard/UI
-- Java client behavior
-- Bedrock client behavior, if enabled
-
----
-
-# ✦ Release philosophy
-
-A Vyre release should improve the server without silently destroying existing configuration or player progress.
-
-Where practical, migrations should preserve:
-
-- Homes
-- Warps
-- Player progression
-- Friend relationships
-- Settings
-- Existing compatible menu customization
-- Other persistent player/server state
-
-Breaking migrations should be clearly documented.
-
----
-
-# ✦ Current development focus
-
-The current project direction emphasizes:
-
-### 01 — Blocking bugs
-Fix startup failures, command failures, broken menus, corrupted configuration and player-data risks.
-
-### 02 — Paper 26.2 stability
-Remove runtime API/ABI incompatibilities and validate affected systems on the target Paper build.
-
-### 03 — Performance
-Reduce unnecessary work in menus, scoreboards, movement/event handlers, world preparation and repeated UI updates.
-
-### 04 — Cross-platform polish
-Make Java, Bedrock and especially mobile navigation feel deliberate rather than merely compatible.
-
-### 05 — Consistency
-Bring older Profile, Friends, Titles, Quests and related interfaces into the same visual language as newer Vyre menus.
-
-New features come after those foundations are healthy.
-
----
-
-# ✦ Reporting bugs
-
-A useful report includes:
-
-| Information | Example |
+| System | Experience |
 | --- | --- |
-| Vyre version | `3.9.7.12` |
-| Paper version | Exact build number |
-| Java runtime | Exact Java version |
-| Client | Java / Bedrock / Both |
-| Reproduction | Exact steps |
-| Expected | What should happen |
-| Actual | What happened |
-| Logs | Relevant stack trace |
-| Frequency | Always / Sometimes / Once |
+| Realm Levels | Progress from 1–50 through real play |
+| Profiles | Rank, level, achievements, coins and playtime |
+| Friends | Trusted building and social management |
+| Homes & Warps | Safe, delayed travel with movement cancellation |
+| Jobs & Quests | Purposeful objectives across survival activities |
+| Events | Outbreaks, meteor crashes, expeditions, caravans and bosses |
+| Cosmetics | Rank- and level-aware visual unlocks |
+| Economy | Shops, rewards and server progression |
+| Premium Chat | Hover details, mentions, messaging, ignore and moderation tools |
+| InfoBoard | Compact live player and realm information |
+| Administration | Diagnostics, setup, reset and testing tools |
 
-Do not post credentials, tokens, database passwords or other secrets.
+## Stability standard
 
-Use the included **Bug Report** issue template whenever possible.
+Every release candidate is checked across the critical server flow:
 
----
+`startup → join → commands → GUI → teleport → reload → restart → existing data`
 
-# ✦ Feature suggestions
+The compatibility gate covers `/begin`, Profiles, Friends, ranks, shops, kits, homes, cosmetics, InfoBoard, YAML loading and teleport services. Persistent player and server data must survive an update.
 
-Feature suggestions are welcome when they explain the **player problem** first.
+## Installation and distribution
 
-A useful suggestion answers:
+Vyre is not distributed publicly from this repository. Authorized server operators receive the compiled plugin and release checksums through a private channel.
 
-1. What currently feels missing or awkward?
-2. Who benefits from the change?
-3. How should the experience feel to the player?
-4. Does it belong in Vyre or would it create unnecessary feature bloat?
-5. How should it behave for Java and Bedrock players?
+See [docs/INSTALLATION.md](docs/INSTALLATION.md) for the safe update procedure and [COMPATIBILITY.md](COMPATIBILITY.md) for supported versions.
 
-Implementation details are intentionally kept private.
+## Closed-source policy
 
----
+This repository is a project showcase and documentation hub. It does **not** grant permission to copy, redistribute, decompile, modify, resell or publish Vyre.
 
-# 🔒 Source & intellectual property
+The following are intentionally excluded:
 
-Vyre is a **private-source / proprietary project**.
+- Java source and build projects;
+- compiled plugin JARs and private release ZIPs;
+- production configuration and secrets;
+- server, player, economy or world data;
+- internal architecture and implementation details.
 
-This public repository is intended for documentation, project presentation, compatibility information, release notes and community issue tracking.
+See [LICENSE.txt](LICENSE.txt) and [SECURITY.md](SECURITY.md).
 
-Unless separately authorized by the rights holder, the public repository does not grant permission to publish or redistribute proprietary Vyre source or private builds.
+## Community
 
-Do not submit:
+Bug reports and feature ideas are welcome through GitHub Issues. Reports should describe visible behavior and reproduction steps without uploading proprietary binaries, private configuration, credentials or player data.
 
-- Leaked source
-- Decompiled source
-- Reconstructed implementation code
-- Private build artifacts
-- Internal development files
+## Creator
 
-Nothing in this repository should be interpreted as publishing the Vyre implementation under an open-source license.
-
----
-
-# ✦ Repository structure
-
-```text
-Vyre/
-├── README.md
-├── CHANGELOG.md
-├── ROADMAP.md
-├── COMPATIBILITY.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── .gitignore
-└── .github/
-    └── ISSUE_TEMPLATE/
-        ├── bug-report.yml
-        └── feature-request.yml
-```
-
-No proprietary Java source is required for this public repository.
+<table>
+  <tr>
+    <td width="90"><img src="https://avatars.githubusercontent.com/u/331589727?v=4" width="72" alt="Shqnnyy Minecraft creator avatar"></td>
+    <td><strong>Shqnnyy</strong><br>Owner · Developer · Creative Direction<br><em>“Turning ideas into worlds.”</em></td>
+  </tr>
+</table>
 
 ---
 
 <div align="center">
 
-## ⚔️ VYRE
+**VYRE — SAME BLOCKS. A DIFFERENT STORY.**
 
-### Medieval survival, built as one experience.
-
-**Private Source • Active Development • Paper**
-
-`Vyre 3.9.7.12`
+© 2026 Shqnnyy. All rights reserved.
 
 </div>

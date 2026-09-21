@@ -1,0 +1,24 @@
+VYRE PROPRIETARY LICENSE
+Version 1.0 — 2026
+
+Copyright (c) 2026 Shqnnyy. All rights reserved.
+
+Vyre, its source code, compiled binaries, configuration design, documentation,
+artwork and related assets are proprietary unless a specific file states
+otherwise in writing.
+
+No permission is granted to copy, modify, merge, publish, distribute,
+sublicense, sell, resell, host, mirror, reverse engineer, decompile or create
+derivative works from the software or its private implementation.
+
+Access to a compiled build does not transfer ownership or source rights.
+Authorized use is limited to the server, account and purpose approved by the
+copyright holder. Authorization may be withdrawn when the license terms are
+violated.
+
+Minecraft, Paper, PlaceholderAPI, LuckPerms, Iris, Geyser and Floodgate are
+owned by their respective rights holders. Vyre is not affiliated with or
+endorsed by Mojang Studios or Microsoft.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, TO THE MAXIMUM
+EXTENT PERMITTED BY LAW.

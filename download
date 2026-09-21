@@ -1,6 +1,6 @@
-# Proprietary Vyre implementation / distributables
-SOURCE/
+# Proprietary Vyre implementation and distributables
 src/
+SOURCE/
 target/
 build/
 out/
@@ -8,27 +8,28 @@ out/
 *.jar
 *.zip
 
-# IDE
+# IDE and local build state
 .idea/
 .vscode/
 *.iml
+.gradle/
 
-# Runtime/server data
-plugins/Vyre/storage/
+# Runtime and server data
 plugins/Vyre/data/
+plugins/Vyre/storage/
 logs/
+world*/
 *.log
 *.db
 *.sqlite
 
-# Secrets
+# Credentials and environment
 .env
 .env.*
 *.key
 *.pem
-secrets.yml
-credentials.yml
+secrets/
 
-# OS
+# OS files
 .DS_Store
 Thumbs.db

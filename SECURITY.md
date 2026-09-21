@@ -1,21 +1,23 @@
 # Security Policy
 
-Vyre is private-source software.
+Vyre is private-source, proprietary software.
 
-## Public reports
+## Reporting a security issue
 
-Ordinary reproducible plugin bugs can be reported through GitHub Issues.
+Do not publish exploitable details, credentials, server addresses not already public, private configuration, player data, binaries or decompiled code in a GitHub Issue.
 
-Before posting logs, remove:
-- passwords;
-- API keys;
-- tokens;
-- database credentials;
-- private addresses or infrastructure information;
-- other secrets.
+Send a private report directly to the repository owner, **ShqnnyyNL**, through an established private contact channel. Include:
 
-## Proprietary material
+- affected Vyre version;
+- Paper build and Java version;
+- concise reproduction steps;
+- expected and actual behavior;
+- a sanitized log excerpt when useful.
 
-Do not publish leaked/decompiled Vyre source, reconstructed implementation code, private builds or internal development artifacts in this repository.
+## Supported version
 
-For a vulnerability that would be unsafe to disclose publicly, contact the project owner privately rather than posting exploitation details in a public issue.
+Security maintenance currently focuses on Vyre 3.9.7.15 running on Paper 26.2 build 126 with Java 25.
+
+## Disclosure
+
+Please allow time to reproduce and fix a report before discussing it publicly. Publication, redistribution or decompilation of Vyre is not authorized by submitting a report.
